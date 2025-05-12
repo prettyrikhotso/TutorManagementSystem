@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Delete Tutor Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+            
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', sans-serif;
+            }
+            
+            body {
+                background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem;
+                animation: fadeIn 0.8s ease-in-out;
+            }
+            
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+            
+            h1 {
+                color: #3a4a6d;
+                margin-bottom: 1rem;
+                text-align: center;
+                text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            }
+            
+            p {
+                color: #555;
+                margin-bottom: 2rem;
+                text-align: center;
+            }
+            
+            form {
+                background: white;
+                padding: 2rem;
+                border-radius: 10px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                max-width: 500px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                animation: slideUp 0.6s ease-out;
+            }
+            
+            form:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            }
+            
+            @keyframes slideUp {
+                from { 
+                    transform: translateY(30px);
+                    opacity: 0;
+                }
+                to { 
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+            
+            table {
+                width: 100%;
+            }
+            
+            td {
+                padding: 0.5rem;
+            }
+            
+            input[type="text"] {
+                width: 100%;
+                padding: 0.8rem;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                font-size: 1rem;
+                transition: all 0.3s ease;
+            }
+            
+            input[type="text"]:focus {
+                border-color: #3a4a6d;
+                box-shadow: 0 0 0 3px rgba(58, 74, 109, 0.2);
+                outline: none;
+            }
+            
+            input[type="submit"] {
+                background: #3a4a6d;
+                color: white;
+                border: none;
+                padding: 0.8rem 1.5rem;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 1rem;
+                transition: all 0.3s ease;
+                width: 100%;
+            }
+            
+            input[type="submit"]:hover {
+                background: #2c3a58;
+                transform: translateY(-2px);
+            }
+            
+            .links {
+                margin-top: 2rem;
+                text-align: center;
+                animation: fadeIn 1s ease-in-out;
+            }
+            
+            .links a {
+                color: #3a4a6d;
+                text-decoration: none;
+                margin: 0 0.5rem;
+                padding: 0.3rem 0.5rem;
+                border-radius: 3px;
+                transition: all 0.3s ease;
+                position: relative;
+            }
+            
+            .links a:hover {
+                color: #2c3a58;
+                background: rgba(58, 74, 109, 0.1);
+            }
+            
+            .links a::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: #3a4a6d;
+                transition: width 0.3s ease;
+            }
+            
+            .links a:hover::after {
+                width: 100%;
+            }
+            
+            @media (max-width: 600px) {
+                form {
+                    padding: 1.5rem;
+                }
+                
+                h1 {
+                    font-size: 1.5rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Delete Tutor</h1>
+        <p>Use the form below to delete a tutor</p>
+        <form action="DeleteTutorServlet.do" method="POST">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Staff Number: </td>
+                        <td><input type="text" name="tut_number" placeholder="Enter staff number"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="Delete Tutor"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <div class="links">
+            <p>Please click <a href="menu.html">here</a> to go back to menu or <a href="EndSessionServlet.do">here</a> to logout</p>
+        </div>
+    </body>
+</html>

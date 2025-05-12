@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View All Tutors Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f9fafb;
+            color: #1f2937;
+            text-align: center;
+            padding: 60px;
+            animation: fadeIn 0.6s ease;
+        }
+
+        h1 {
+            color: #1d4ed8;
+            font-size: 36px;
+            margin-bottom: 20px;
+            animation: slideIn 0.6s ease;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: inline-block;
+            margin: 20px auto;
+            animation: fadeIn 1s ease-in;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #2563eb;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1e40af;
+        }
+
+        a {
+            color: #1d4ed8;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 5px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <h1>📋 View All Tutors</h1>
+    <p>Please click the button below to view all registered tutors.</p>
+
+    <form action="ViewAllTutorsServlet.do" method="POST">
+        <input type="submit" value="View All Tutors">
+    </form>
+
+    <p>
+        Click <a href="menu.html">here</a> to go back to the menu or 
+        <a href="EndSessionServlet.do">here</a> to logout.
+    </p>
+</body>
+</html>

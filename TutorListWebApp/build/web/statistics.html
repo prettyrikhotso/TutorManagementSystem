@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get Statistics Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #ffe082, #ffccbc);
+            text-align: center;
+            padding: 50px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        h1 {
+            color: #bf360c;
+            animation: slideIn 1s ease-out;
+        }
+
+        p {
+            font-size: 18px;
+            color: #4e342e;
+        }
+
+        form {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 20px;
+            background-color: #ffffffdd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            animation: zoomIn 0.7s ease;
+        }
+
+        table {
+            margin: 0 auto;
+        }
+
+        td {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #e64a19;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #bf360c;
+        }
+
+        a {
+            color: #d84315;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Display Statistics</h1>
+    <p>Please click the button to see the statistics</p>
+    <form action="StatisticsServlet.do" method="POST">
+        <table border="0">
+            <tbody>
+                <tr>
+                    <td>Click to view statistics:</td>
+                    <td><input type="submit" value="View Statistics"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <p>Please click <a href="menu.html">here</a> to go back to menu or 
+       <a href="EndSessionServlet.do">here</a> to logout</p>
+</body>
+</html>

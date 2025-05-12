@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Tutor Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #f0f4c3, #e0f2f1);
+            text-align: center;
+            padding: 50px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        h1 {
+            color: #00695c;
+            animation: slideIn 1s ease-out;
+        }
+
+        p {
+            font-size: 18px;
+            color: #444;
+        }
+
+        form {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 20px;
+            background-color: #ffffffcc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            animation: zoomIn 0.7s ease;
+        }
+
+        table {
+            margin: 0 auto;
+        }
+
+        td {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #b2dfdb;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #004d40;
+        }
+
+        a {
+            color: #00695c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Tutor</h1>
+    <p>Use the form below to search for a tutor</p>
+    <form action="SearchTutorServlet.do" method="POST">
+        <table>
+            <tbody>
+                <tr>
+                    <td>Staff Number: </td>
+                    <td><input type="text" name="tut_number"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Get Tutor"></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Please click <a href="menu.html">here</a> to go back to menu or 
+        <a href="EndSessionServlet.do">here</a> to logout</p>
+    </form>
+</body>
+</html>
