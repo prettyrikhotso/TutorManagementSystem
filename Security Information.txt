@@ -1,0 +1,13 @@
+When creating the database please use the following data: 
+• Username: app
+• Password: 123 
+• Database name: TutorListDB
+
+
+The login details of a supervisor are as follows: 
+• Username: supervisor
+• Password: 123 
+
+Those of the administrator are as follows: 
+• Username: admin
+• Password: 123
